@@ -3,8 +3,6 @@ from django.urls import path, include
 
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
-    path('main/',include('geoAPI.urls', namespace="geoAPI"))
-
+    path('main/',include('geoAPI.urls'))
 ]
