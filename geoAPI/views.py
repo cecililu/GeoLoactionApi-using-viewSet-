@@ -6,6 +6,8 @@ from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 
+
+
 from geoAPI.serialiser import AddressSerializer,UserSerializer
 from geoAPI.models import Address
 from rest_framework.authentication import BasicAuthentication
@@ -16,9 +18,8 @@ class GeoViewSet(viewsets.ModelViewSet):
     serializer_class =AddressSerializer 
     authentication_classes=[BasicAuthentication]
     permission_classes=[IsAuthenticated]
- 
- 
- #userViewsets   
+    
+ #userViewsets
 class UserViewSet(viewsets.ViewSet):
     def list(self,request):
         queryset=User.objects.all()
