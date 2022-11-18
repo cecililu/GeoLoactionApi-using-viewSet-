@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
     # url = serializers.HyperlinkedIdentityField(view_name="geoAPI:user-detail")
     class Meta:
         model=User       
-        fields = ('first_name',)
+        fields = '__all__'
         
 class AddressSerializer(serializers.ModelSerializer):
     
